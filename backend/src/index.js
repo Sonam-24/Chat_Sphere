@@ -35,9 +35,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
-app.get("/", (req, res) => {
-  res.send("✅ Backend is running fine!");
-});
 server.listen(PORT, () => {
   console.log("server is running on PORT:" + PORT);
   connectDB();
